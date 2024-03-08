@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 7305883019184624847}
   - component: {fileID: 8460391419331020239}
   - component: {fileID: 4704365538875695042}
+  - component: {fileID: 7037134354958742149}
+  - component: {fileID: 6286307955916294547}
   m_Layer: 0
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,3 +154,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.84375, y: 0.6875}
   m_EdgeRadius: 0
+--- !u!114 &7037134354958742149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689123434644907058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16ba0fa29bae93409796a2d232ffee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: cd1c7c2e40e5c544686b63d3b176bc75, type: 2}
+--- !u!114 &6286307955916294547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689123434644907058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6309c02822760dd4ab1851aca29ed129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: cd1c7c2e40e5c544686b63d3b176bc75, type: 2}

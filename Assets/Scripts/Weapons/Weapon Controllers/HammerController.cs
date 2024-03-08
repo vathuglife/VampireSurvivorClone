@@ -12,7 +12,7 @@ public class HammerController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedHammer = Instantiate(prefab);
+        GameObject spawnedHammer = Instantiate(weaponData.Prefab);
         spawnedHammer.transform.position = transform.position; //Assign the position to be the same as this object which is parented to the player
         spawnedHammer.GetComponent<HammerBehaviour>().DirectionChecker(pm.lastMovedVector);   //Reference and set the direction
     }
