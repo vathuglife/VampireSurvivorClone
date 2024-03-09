@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de47217ef6045b742bf92be45eb08e4f, type: 3}
-  m_Name: Garlic Weapon
+  m_Name: Hammer Weapon Level 2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 9012510256753214854, guid: e0c7eeb02ac29b245ab390b0e728af5f, type: 3}
-  damage: 1
-  speed: 0
-  cooldownDuration: 3
-  pierce: 0
+  prefab: {fileID: 671406496659039582, guid: 47ef6d2a00d353a47ae78324242e0163, type: 3}
+  damage: 5
+  speed: 15
+  cooldownDuration: 2
+  pierce: 1
+  level: 2
+  nextLevelPrefab: {fileID: 0}
+  icon: {fileID: 993091678, guid: a6140e77f46c723429478e118ae7842a, type: 3}
