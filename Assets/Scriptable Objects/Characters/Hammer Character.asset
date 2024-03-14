@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccd0518a5ce7724f86d414068810498, type: 3}
   m_Name: Hammer Character
   m_EditorClassIdentifier: 
+  icon: {fileID: -5044664615930318519, guid: d3044741a5868fa4eba95b098108e7b9, type: 3}
+  name: Hammer Character
   startingWeapon: {fileID: 4940118286346855362, guid: f9bcd60e08b93614e8dac28db917bd6a, type: 3}
   maxHealth: 1000
   recovery: 1

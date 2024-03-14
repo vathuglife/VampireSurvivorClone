@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de47217ef6045b742bf92be45eb08e4f, type: 3}
   m_Name: Hammer Weapon Level 2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 671406496659039582, guid: 47ef6d2a00d353a47ae78324242e0163, type: 3}
+  prefab: {fileID: 671406496659039582, guid: df9a1d5a6e062ed4bba153d7a747885f, type: 3}
   damage: 5
   speed: 15
   cooldownDuration: 2
   pierce: 1
   level: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 4940118286346855362, guid: f9efa0dd5acd5dd4eac6b43ec8d6f9e5, type: 3}
+  name: Hammer Level 2
+  description: Speed is up by 15
   icon: {fileID: 993091678, guid: a6140e77f46c723429478e118ae7842a, type: 3}
