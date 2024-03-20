@@ -6119,6 +6119,7 @@ GameObject:
   - component: {fileID: 1315644335}
   - component: {fileID: 1315644336}
   - component: {fileID: 1315644337}
+  - component: {fileID: 1315644338}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6329,6 +6330,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2f4be69b9b850c459f17a7a6975be18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseStats:
+    maxHealth: 0
+    recovery: 0
+    moveSpeed: 0
+    might: 0
+    speed: 0
+    magnet: 0
+  actualStats:
+    maxHealth: 0
+    recovery: 0
+    moveSpeed: 0
+    might: 0
+    speed: 0
+    magnet: 0
   damageEffect: {fileID: 8814233404727246373, guid: 0016f2df6a536a146b24315b89c2e9a1, type: 3}
   experience: 0
   level: 1
@@ -6346,9 +6361,6 @@ MonoBehaviour:
   healthBar: {fileID: 1332778140}
   expBar: {fileID: 1258404020}
   levelText: {fileID: 1795432237}
-  secondWeaponTest: {fileID: 4075127774029436078, guid: 354f8634339df264fb88cdb28a01bd61, type: 3}
-  firstPassiveItemTest: {fileID: 5766978440237165983, guid: 4456e84b41bb0c94fb277cfca84d5037, type: 3}
-  secondPassiveItemTest: {fileID: 8572230668588118280, guid: 88978c9dde44d96408b46f81e2ede872, type: 3}
 --- !u!114 &1315644337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6356,7 +6368,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315644328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa1eaf0a2aba8047997d695f4f8fbd5, type: 3}
   m_Name: 
@@ -6424,6 +6436,67 @@ MonoBehaviour:
     upgradeButton: {fileID: 927470228}
   weaponEvolutions:
   - {fileID: 11400000, guid: 871dda4cb9ca26a4aa1246aec0378cc4, type: 2}
+--- !u!114 &1315644338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315644328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60f29f7344652a4e9f74573bd40560a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSlots:
+  - item: {fileID: 0}
+    image: {fileID: 482958169}
+  - item: {fileID: 0}
+    image: {fileID: 1401870898}
+  - item: {fileID: 0}
+    image: {fileID: 1638106576}
+  - item: {fileID: 0}
+    image: {fileID: 101397690}
+  - item: {fileID: 0}
+    image: {fileID: 1313880839}
+  - item: {fileID: 0}
+    image: {fileID: 1836838040}
+  passiveSlots:
+  - item: {fileID: 0}
+    image: {fileID: 184399435}
+  - item: {fileID: 0}
+    image: {fileID: 137889124}
+  - item: {fileID: 0}
+    image: {fileID: 2115744384}
+  - item: {fileID: 0}
+    image: {fileID: 1077209788}
+  - item: {fileID: 0}
+    image: {fileID: 1328131531}
+  - item: {fileID: 0}
+    image: {fileID: 825818548}
+  availableWeapons:
+  - {fileID: 11400000, guid: 36a1221814de0ce49b312ec337ccf13f, type: 2}
+  availablePassives:
+  - {fileID: 11400000, guid: 06c75746133a44547a9cdd578f4269e1, type: 2}
+  - {fileID: 11400000, guid: e5a1c5a5608be1d49a3cbfd210d02628, type: 2}
+  - {fileID: 11400000, guid: fc77d04d6d691d34a9b9831c3ce2caf8, type: 2}
+  upgradeUIOptions:
+  - upgradeNameDisplay: {fileID: 366600808}
+    upgradeDescriptionDisplay: {fileID: 1936706742}
+    upgradeIcon: {fileID: 915237502}
+    upgradeButton: {fileID: 319724399}
+  - upgradeNameDisplay: {fileID: 366600808}
+    upgradeDescriptionDisplay: {fileID: 1936706742}
+    upgradeIcon: {fileID: 915237502}
+    upgradeButton: {fileID: 319724399}
+  - upgradeNameDisplay: {fileID: 982570111}
+    upgradeDescriptionDisplay: {fileID: 1595871640}
+    upgradeIcon: {fileID: 258896050}
+    upgradeButton: {fileID: 2019584759}
+  - upgradeNameDisplay: {fileID: 229419116}
+    upgradeDescriptionDisplay: {fileID: 1099018133}
+    upgradeIcon: {fileID: 559251181}
+    upgradeButton: {fileID: 927470228}
 --- !u!1 &1321391219
 GameObject:
   m_ObjectHideFlags: 0
@@ -10413,6 +10486,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123673909}
   m_CullTransparentMesh: 1
+--- !u!1001 &3134331378764540051
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148336445280558839, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102009323342982905, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
+      propertyPath: m_Name
+      value: Knife Projectile
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3274cfe60be16f34a8305377a039cee0, type: 3}
 --- !u!1001 &7106486854425842013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10697,3 +10827,4 @@ SceneRoots:
   - {fileID: 974562700}
   - {fileID: 1250576284}
   - {fileID: 8446383460983793663}
+  - {fileID: 3134331378764540051}

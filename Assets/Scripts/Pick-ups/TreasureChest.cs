@@ -6,30 +6,31 @@ using Random = UnityEngine.Random;
 
 public class TreasureChest : MonoBehaviour
 {
-    InventoryManager inventory;
-    // Start is called before the first frame update
-    void Start()
-    {
-        inventory = FindObjectOfType<InventoryManager>();
-    }
-
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        PlayerInventory p = col.GetComponent<PlayerInventory>();
+        if (p)
         {
-            OpenTreasureChest();
-            Destroy(gameObject);
+            bool randomBool = Random.Range(0,2) == 0;
+            
         }
     }
-    
-    public void OpenTreasureChest()
+
+    public void OpenTreasureChest(PlayerInventory inventory, bool isHigherTier)
     {
-        if (inventory.GetPossibleEvolutions().Count <= 0)
-        {
-            Debug.LogWarning("No possible evolutions");
-            return;
+        foreach (PlayerInventory.Slot s in inventory.weaponSlots) 
+        { 
+            Weapon w = s.item as Weapon;
+            if (w.data.evolutionData == null) continue;
+
+            foreach (ItemData.Evolution e in w.data.evolutionData)
+            {
+                if (e.condition == ItemData.Evolution.Condition.treasureChest)
+                {
+                    bool attempt = w.AttemptEvolution(e, 0);
+                    if (attempt) return;
+                }
+            }
         }
-        WeaponEvolutionBlueprint toEvolve = inventory.GetPossibleEvolutions()[Random.Range(0, inventory.GetPossibleEvolutions().Count)];
-        inventory.EvolveWeapon(toEvolve);
     }
 }
